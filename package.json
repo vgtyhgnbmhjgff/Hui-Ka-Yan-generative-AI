@@ -1,0 +1,14 @@
+{
+  "name": "xujiayin-model",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "许家印大模型 —— 公益玩笑 OpenAI 兼容接口（Cloudflare Worker）",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}
