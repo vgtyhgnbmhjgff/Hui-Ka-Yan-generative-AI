@@ -3,8 +3,7 @@ const DEFAULT_MODEL = MODELS[0];
 
 const DEFAULT_REPLIES = [
   "做公益就是为了你们调用，你们都调用了我为什么还要给你们真模型",
-  "预付恒大顶级别墅，送许家印空城计教程",
-  "我在用 MiMo 开放平台，体验小米顶尖模型 MiMo V2.5 等。通过我的邀请码注册：双方各得 ¥10 API 体验金 + 首单 9 折。邀请码：JM586C。注册：https://platform.xiaomimimo.com?ref=JM586C（注册后自动填入 · 体验金 40 天有效）白嫖小米mimo多模态大模型api"
+  "预付恒大顶级别墅，送许家印空城计教程"
 ];
 
 function resolveReplies(env) {
