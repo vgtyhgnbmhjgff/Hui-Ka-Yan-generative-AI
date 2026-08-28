@@ -1,10 +1,10 @@
-# 许家印大模型
+介绍：许家印大模型
 
 OpenAI 兼容接口，部署在 Cloudflare Worker 上。不限速、不限量、不需要密钥，任何 OpenAI 客户端填对 Base URL 就能用。
 
-说明：本项目是玩笑，返回的是预设文本，不是真模型。
+说明：本项目可以在任何有热度的时间蹭流量，返回的是预设文本，不是真模型。
 
-## 接口信息
+1.接口信息
 
 Base URL：`https://你的域名/v1`
 
@@ -18,7 +18,7 @@ Base URL：`https://你的域名/v1`
 - `GET /v1/models`
 - `GET /`，居中的落地页，Base URL 会自动显示当前域名
 
-## 调用示例
+调用示例
 
 ```bash
 curl https://你的域名/v1/chat/completions \
@@ -26,13 +26,6 @@ curl https://你的域名/v1/chat/completions \
   -d '{"model":"许家印大模型","messages":[{"role":"user","content":"你好"}]}'
 ```
 
-流式：
-
-```bash
-curl https://你的域名/v1/chat/completions \
-  -H "Content-Type: application/json" \
-  -d '{"model":"许家印大模型","messages":[{"role":"user","content":"你好"}],"stream":true}'
-```
 
 OpenAI 官方 SDK：
 
@@ -82,8 +75,6 @@ npm run deploy
 
 `Workers & Pages > 你的项目 > Settings > Domains & Routes > Add > Custom Domain`，填入域名即可。域名托管在 Cloudflare 时 DNS 会自动配好。
 
-## 接入自己的判断逻辑
+#接入自己的判断逻辑
 
 `worker.js` 里 `randomReply(replies)` 是唯一的回复出口，把判断逻辑写在这里即可。
-
-免责声明：文案中的第三方邀请链接属于官方返利活动，点击、注册前请自行确认。
